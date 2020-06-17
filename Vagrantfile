@@ -40,17 +40,4 @@ servers.each do |servers|
     servers["shell_commands"].each do |sh|
       srv.vm.provision "shell", inline: sh["shell"]
     end
-
-     srv.vm.provision :puppet do |puppet|
-         puppet.temp_dir = "/tmp"
-         puppet.options = ['--modulepath=/tmp/modules', '--verbose', '--debug']
-         #puppet.options = ['--modulepath=/tmp/modules']
-         puppet.hiera_config_path = "hiera.yaml"
-         puppet.environment_path  = './'
-         puppet.environment       = 'production'
-         puppet.manifests_path    = 'manifests'
-         puppet.manifest_file     = 'default.pp'
-         end
-      end
-    end
   end
