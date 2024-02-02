@@ -1,6 +1,6 @@
 ---
 -
-  box: bento/ubuntu-18.04
+  box: bento/ubuntu-22.04
   cpu: 1
   ip: "172.17.10.105"
   name: node-01
@@ -28,9 +28,8 @@
       - { shell: 'cp /home/vagrant/node-02/Puppetfile /tmp && cd /tmp && r10k puppetfile install --verbose' }
       - { shell: 'cp /home/vagrant/node-02/modules/* -R /tmp/modules || true' }
 
-
 -
-  box: bento/ubuntu-18.04
+  box: bento/ubuntu-22.04
   cpu: 1
   ip: "172.17.10.107"
   name: node-03
@@ -59,7 +58,7 @@
       - { shell: 'cp /home/vagrant/node-04/Puppetfile /tmp && cd /tmp && r10k puppetfile install --verbose' }
       - { shell: 'cp /home/vagrant/node-04/modules/* -R /tmp/modules || true' }
 -
-  box: bento/ubuntu-14.04
+  box: bento/ubuntu-22.04
   cpu: 1
   ip: "172.17.10.110"
   name: node-05
