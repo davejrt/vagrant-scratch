@@ -1,6 +1,6 @@
 ---
 -
-  box: bento/ubuntu-16.04
+  box: bento/ubuntu-18.04
   cpu: 1
   ip: "172.17.10.105"
   name: node-01
